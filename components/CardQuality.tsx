@@ -5,7 +5,7 @@ import smileyImg from '../public/smiley.svg'
 
 const CardQuality: React.FC = () => {
   return (
-    <div className='flex flex-col items-center text-white bg-[#363447] py-7 px-20 rounded-2xl shadow-card'>
+    <div className='flex flex-col items-center text-white bg-[#363447] py-7 px-12 rounded-2xl shadow-card'>
       <div id="top" className='font-semiboldbold text-2xl'>
         <p>NPS geral</p>
       </div>

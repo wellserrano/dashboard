@@ -14,15 +14,18 @@ const inter = Inter({
 
 const Home: React.FC = () => {
   return (
-    <div className={`${inter.variable} font-inter flex justify-center items-center w-full min-h-screen bg-[#292738]`}>
+    <div 
+    className={`${inter.variable} font-inter flex justify-center 
+    items-center w-full min-h-screen bg-[#292738] p-32`}
+    >
       <Head>
         <title>dashboard</title>
       </Head>
       
       <div className='grid grid-cols-3 grid-rows-2 gap-4'>
         <CardQuality />
-        <CardQuantity />
-        <CardQuantity />
+        <CardQuantity title='Vendas fechadas' size={200} percentage={ 25 }/>
+        <CardQuantity title='Meta mensal' size={200} percentage={ 75 }/>
         <Panel />
       </div>
     </div>

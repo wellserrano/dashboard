@@ -1,20 +1,64 @@
-import Image from 'next/image'
 import React from 'react'
 
-import smileyImg from '../public/smiley.svg'
+import { Circle } from 'phosphor-react'
 
-const CardQuantity: React.FC = () => {
+interface Props {
+  percentage: number
+  size: number
+  title: string
+}
+
+const CardQuantity: React.FC<Props> = ({ title, percentage, size }) => {
+  const radius = 75 ;
+  const dashArray = radius * Math.PI * 2;
+  const dashOffset = dashArray - (dashArray * percentage) / 100;
+
   return (
-    <div className='flex flex-col items-center text-white bg-[#363447] py-7 px-20 rounded-2xl shadow-card'>
-      <div id="top" className='font-semiboldbold text-2xl'>
-        <p>NPS geral</p>
+    <div className='flex flex-col justify-center items-center text-white bg-[#363447] py-7 px-12 rounded-2xl shadow-card'>
+      <div id="top" className='flex justify-center items-center font-semibold text-2xl'>
+        <p>{ title }</p>
       </div>
-      <div id="content" className='flex flex-col items-center text-[#81FBB8] font-semibold text-2xl my-20 gap-4'>
-        <Image src={ smileyImg } alt="smiley face"/>
-        <p>Excelente!</p>
-      </div>
-      <div id="bottom" className='text-sm font-medium'>
-        <p>NPS Score 75</p>
+      <div id="progress-circle">
+        <div className='flex flex-col items-center'>
+          <svg 
+            width={ size } 
+            height={ size } 
+            viewBox={`0 0 ${ size } ${ size }`}
+          >
+            <circle
+              id='circle-background'
+              cx={ size/2 }
+              cy={ size/2 }
+              strokeWidth="29px"
+              r={ radius }
+              className='fill-none stroke-slate-500'
+            />
+            <circle
+              id='circle-progress'
+              cx={ size/2 }
+              cy={ size/2 }
+              strokeWidth="29px"
+              r={ radius }
+              className='fill-none stroke-blue-500'
+              style={{
+                strokeDasharray: dashArray,
+                strokeDashoffset: dashOffset,
+                strokeLinecap: 'round',
+                strokeLinejoin: 'round',
+              }}
+              transform={`rotate(-90 ${ size/2 } ${ size/2 })`}
+              
+            />
+            <text x='50%' y='50%' dy='0.3em' textAnchor='middle' className='text-4xl fill-white' >
+              { percentage }%
+            </text>
+          </svg>
+          <div id="bottom" className='flex gap-4'>
+            <p>Esperado 100</p>
+            <p>Alcançado { percentage }</p>
+          </div>
+        </div>
+        
       </div>
     </div>
   )
