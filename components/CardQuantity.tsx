@@ -23,6 +23,7 @@ const CardQuantity: React.FC<Props> = ({ title, percentage, size }) => {
           <svg 
             width={ size } 
             height={ size } 
+            className='my-8'
             viewBox={`0 0 ${ size } ${ size }`}
           >
             <circle
