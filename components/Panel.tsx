@@ -1,6 +1,7 @@
 import React from 'react'
 
-import Image from 'next/image'
+// import Image from 'next/image'
+import GraphBarVert from './GraphBarVert'
 
 import { Triangle } from 'phosphor-react'
 
@@ -22,7 +23,16 @@ const Panel: React.FC = () => {
             <p className='text-2xl'>domingo</p>
         </div>
         <div>
-          <Image src='/chart-test.png' alt='chat example' width={523} height={186}/>
+          <GraphBarVert data={[
+            {weekday: 'dom', height: '39'},
+            {weekday: 'seg', height: '39'},
+            {weekday: 'ter', height: '39'},
+            {weekday: 'qua', height: '39'},
+            {weekday: 'qui', height: '39'},
+            {weekday: 'sex', height: '39'},
+            {weekday: 'sab', height: '39'},
+          ]}/>
+          {/* <Image src='/chart-test.png' alt='chat example' width={523} height={186}/> */}
         </div>
       </div>
 
