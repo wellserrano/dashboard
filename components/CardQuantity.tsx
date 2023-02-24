@@ -55,8 +55,14 @@ const CardQuantity: React.FC<Props> = ({ title, percentage, size }) => {
             </text>
           </svg>
           <div id="bottom" className='flex gap-4'>
-            <p>Esperado 100</p>
-            <p>Alcançado { percentage }</p>
+            <p className='flex gap-1 text-sm items-center'>
+              <Circle size={15} weight="fill" color='#4A4556' />
+              Esperado 100
+            </p>
+            <p className='flex gap-1 text-sm items-center'>
+              <Circle size={15} weight="fill" color='#CE9FFC' />
+              Alcançado { percentage }
+            </p>
           </div>
         </div>
         
