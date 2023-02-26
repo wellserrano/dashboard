@@ -25,12 +25,12 @@ const Panel: React.FC = () => {
         <div>
           <GraphBarVert data={[
             {weekday: 'dom', height: '39'},
-            {weekday: 'seg', height: '39'},
-            {weekday: 'ter', height: '39'},
-            {weekday: 'qua', height: '39'},
-            {weekday: 'qui', height: '39'},
-            {weekday: 'sex', height: '39'},
-            {weekday: 'sab', height: '39'},
+            {weekday: 'seg', height: '115'},
+            {weekday: 'ter', height: '76'},
+            {weekday: 'qua', height: '159'},
+            {weekday: 'qui', height: '129'},
+            {weekday: 'sex', height: '120'},
+            {weekday: 'sab', height: '69'},
           ]}/>
           {/* <Image src='/chart-test.png' alt='chat example' width={523} height={186}/> */}
         </div>
