@@ -22,7 +22,7 @@ const Home: React.FC = () => {
         <title>dashboard</title>
       </Head>
       
-      <div className='grid grid-cols-3 grid-rows-2 gap-4'>
+      <div className='flex flex-col gap-6 lg:grid lg:grid-cols-3 lg:grid-rows-2'>
         <CardQuality />
         <CardQuantity title='Vendas fechadas' size={200} percentage={ 25 }/>
         <CardQuantity title='Meta mensal' size={200} percentage={ 75 }/>

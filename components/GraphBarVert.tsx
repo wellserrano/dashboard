@@ -9,8 +9,6 @@ interface DataProps {
 
 const GraphBarVert: React.FC<DataProps> = ({ data }) => {
 
-  console.log(data)
-
   return (
     <div className="relative flex items-baseline justify-between z-10 gap-[59px]">
 
