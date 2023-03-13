@@ -16,7 +16,7 @@ const Home: React.FC = () => {
   return (
     <div 
     className={`${inter.variable} font-inter flex justify-center 
-    items-center w-full min-h-screen bg-[#292738] p-32`}
+    items-center flex-col min-w-min min-h-screen bg-[#292738] p-32`}
     >
       <Head>
         <title>dashboard</title>
@@ -28,6 +28,7 @@ const Home: React.FC = () => {
         <CardQuantity title='Meta mensal' size={200} percentage={ 75 }/>
         <Panel />
       </div>
+      
     </div>
   )
 }
