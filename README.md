@@ -1,6 +1,6 @@
 # Dashboard Sample
 
-Sample design for dashboard.
+Sample design for dashboards.
 
 ## Future Features
 
